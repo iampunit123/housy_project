@@ -1,217 +1,302 @@
-Perfect! I’ve updated your README so the **live demo link** is included and fully ready to copy-paste. I also added a neat “Live Demo” badge for style:
 
-````markdown
+```markdown
 # 🏠 Housy - Sustainable Housing Made Easy
 
-![Housy Banner](https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)
+![Housy Banner](https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)
 
-> **Connecting Kenyans with Sustainable, Eco-Friendly Housing Solutions**
+> **Connecting Kenyans with Eco-Friendly Living Spaces**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-brightgreen)](https://housy-project-ffe752.netlify.app/)
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://housy-project-ffe752.netlify.app/)
+[![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue)](https://github.com/iampunit123/housy_project)
+[![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-green)](https://github.com/iampunit123/housy_project)
+[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-orange)](https://github.com/iampunit123/housy_project)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/iampunit123/housy_project)
+
+</div>
 
 ---
 
 ## 🌟 Overview
 
-Housy is a modern property listing platform focused on **sustainable housing in Kenya**. We bridge the gap between environmentally conscious property seekers and landlords offering eco-friendly accommodations, office spaces, and short-term rentals.
+Housy is a modern property listing platform revolutionizing Kenya's housing market by focusing on **sustainable living**. We connect environmentally conscious individuals with eco-friendly properties while promoting green living practices across urban centers.
 
 ### 🎯 Key Features
 
-- **🏡 Smart Property Listings** - Advanced search with sustainability filters
-- **🌱 Sustainability Scoring** - AI-powered eco-rating system for properties
-- **📱 Modern Interface** - Beautiful, responsive design built with React & Tailwind
-- **🔐 Secure Platform** - JWT authentication and role-based access
-- **🖼️ Image Management** - Cloudinary integration for seamless media uploads
-- **👥 Multi-User Roles** - Tenants, Landlords, and Admin panels
-- **⭐ Review System** - Community-driven property ratings
+| Feature | Description |
+|---------|-------------|
+| 🏡 **Smart Property Discovery** | Advanced search with sustainability filters |
+| 🌱 **Eco-Rating System** | AI-powered sustainability scoring for properties |
+| 📱 **Seamless Experience** | Beautiful, responsive design built with modern technologies |
+| 🔐 **Secure Platform** | JWT authentication & role-based access control |
+| 🖼️ **Media Management** | Cloudinary integration for high-quality image uploads |
+| 👥 **Multi-Role Ecosystem** | Tailored experiences for Tenants, Landlords, and Admins |
+| ⭐ **Community Reviews** | Trust-based rating system for properties and landlords |
 
 ---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js `16+` 
-- MongoDB `4.4+`
-- Cloudinary account (for image storage)
+- **Node.js** `16+` 
+- **MongoDB** `4.4+` (Atlas recommended for production)
+- **Cloudinary Account** (for image storage)
 
-### Installation
+### Installation & Local Development
 
-1. **Clone the repository**
+1. **Clone & Setup**
 ```bash
 git clone https://github.com/iampunit123/housy_project.git
-cd housy
-````
+cd housy_project
+```
 
 2. **Backend Setup**
-
 ```bash
 cd backend
 npm install
+
+# Configure environment
 cp .env.example .env
-# Configure your .env file with MongoDB and Cloudinary credentials
+# Add your MongoDB, JWT, and Cloudinary credentials
+
+# Start development server
 npm run dev
 ```
 
 3. **Frontend Setup**
-
 ```bash
 cd ../frontend
 npm install
 npm run dev
 ```
 
-4. **Access the Application**
-
-* Frontend: [http://localhost:3000](http://localhost:3000)
-
-* Backend API: [http://localhost:5000](http://localhost:5000)
-
-* **Live Demo:** [https://housy-project-ffe752.netlify.app/](https://housy-project-ffe752.netlify.app/)
+4. **Access Your Application**
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5000
+- **Live Demo**: [housy-project-ffe752.netlify.app](https://housy-project-ffe752.netlify.app/)
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Technology Stack
 
-| Frontend     | Backend    |
-| ------------ | ---------- |
-| React 18     | Node.js    |
-| Vite         | Express.js |
-| Tailwind CSS | MongoDB    |
-| React Router | Mongoose   |
-| Axios        | JWT        |
-| Lucide React | Cloudinary |
-|              | bcryptjs   |
+### Frontend
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
+
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-16+-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-4.x-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-47A248?logo=mongodb&logoColor=white)
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Architecture
 
 ```
-housy/
-├── backend/
-│   ├── config/          # Database & service configurations
-│   ├── controllers/     # Route handlers
-│   ├── middleware/      # Auth & upload middleware
+housy_project/
+├── 📂 backend/
+│   ├── config/          # Database & external services
+│   ├── controllers/     # Business logic handlers
+│   ├── middleware/      # Authentication & validation
 │   ├── models/          # MongoDB schemas
-│   ├── routes/          # API routes
-│   └── server.js        # Entry point
-├── frontend/
+│   ├── routes/          # API endpoints
+│   └── server.js        # Application entry point
+├── 📂 frontend/
 │   ├── src/
-│   │   ├── components/  # Reusable React components
-│   │   ├── pages/       # Page components
-│   │   ├── contexts/    # React context providers
-│   │   ├── services/    # API services
+│   │   ├── components/  # Reusable UI components
+│   │   ├── pages/       # Route components
+│   │   ├── contexts/    # State management
+│   │   ├── services/    # API integration
 │   │   └── utils/       # Helper functions
 │   └── package.json
-└── README.md
+└── 📚 README.md
 ```
 
 ---
 
-## 🔑 API Endpoints
+## 🔌 API Endpoints
 
 ### Authentication
-
-* `POST /api/auth/register` - User registration
-* `POST /api/auth/login` - User login
-* `GET /api/auth/profile` - Get user profile
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|---------|
+| `POST` | `/api/auth/register` | User registration | Public |
+| `POST` | `/api/auth/login` | User authentication | Public |
+| `GET` | `/api/auth/profile` | Get user profile | Private |
 
 ### Properties
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|---------|
+| `GET` | `/api/properties` | Get filtered properties | Public |
+| `GET` | `/api/properties/featured` | Featured listings | Public |
+| `POST` | `/api/properties` | Create new property | Landlord |
+| `PUT` | `/api/properties/:id` | Update property | Owner/Admin |
 
-* `GET /api/properties` - Get properties with filters
-* `GET /api/properties/featured` - Get featured properties
-* `POST /api/properties` - Create property (Landlord)
-* `PUT /api/properties/:id` - Update property
-
-### Admin
-
-* `GET /api/admin/dashboard` - Admin dashboard stats
-* `GET /api/admin/users` - User management
-* `PUT /api/admin/properties/:id/feature` - Feature properties
-
----
-
-## 🌱 Sustainability Features
-
-Housy rates properties based on:
-
-* **Energy Efficiency** (Solar panels, insulation, etc.)
-* **Water Conservation** (Rainwater harvesting, low-flow fixtures)
-* **Waste Management** (Recycling systems, composting)
-* **Sustainable Materials** (Eco-friendly construction)
+### Administration
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|---------|
+| `GET` | `/api/admin/dashboard` | Platform analytics | Admin |
+| `GET` | `/api/admin/users` | User management | Admin |
+| `PUT` | `/api/admin/properties/:id/feature` | Feature properties | Admin |
 
 ---
 
-## 👥 User Roles
+## 🌱 Sustainability Framework
 
-| Role         | Features                                                                       |
-| ------------ | ------------------------------------------------------------------------------ |
-| 🧑‍💼 Tenant | Browse & search properties, save favorites, submit reviews, contact landlords  |
-| 🏠 Landlord  | Create/manage listings, upload images, track performance, respond to inquiries |
-| 👨‍💼 Admin  | Platform moderation, user management, analytics, featuring content             |
+Housy evaluates properties based on comprehensive environmental criteria:
+
+### Energy Efficiency (25%)
+- ☀️ Solar panel installations
+- ⚡ Energy-star rated appliances
+- 💡 LED lighting systems
+- 🏠 Smart home automation
+
+### Water Conservation (25%)
+- 💧 Rainwater harvesting systems
+- 🚿 Low-flow fixtures
+- 🔄 Greywater recycling
+- 🌿 Drought-resistant landscaping
+
+### Waste Management (25%)
+- ♻️ Recycling infrastructure
+- 🍂 Composting facilities
+- 📉 Waste reduction programs
+- 📦 Sustainable packaging
+
+### Materials & Construction (25%)
+- 🏗️ Eco-friendly building materials
+- 🌿 Green roofing
+- 🌳 Sustainable wood sourcing
+- 🎨 Low-VOC paints
 
 ---
 
-## 🎨 UI/UX Features
+## 👥 User Roles & Permissions
 
-* Responsive Design - Mobile-first approach
-* Dark Navigation - Distinct brand identity
-* Sustainability Badges - Clear eco-ratings
-* Advanced Filtering - Find perfect matches
-* Image Galleries - High-quality property visuals
+### 🧑‍💼 Tenant
+- **Browse & Search** - Advanced filtering with sustainability scores
+- **Save Favorites** - Personalized property collections
+- **Submit Reviews** - Community-driven ratings system
+- **Contact Landlords** - Secure messaging platform
+
+### 🏠 Landlord
+- **Property Management** - Create, update, and manage listings
+- **Media Upload** - High-quality image galleries
+- **Performance Analytics** - Listing views and engagement metrics
+- **Tenant Communication** - Direct messaging system
+
+### 👨‍💼 Administrator
+- **Platform Moderation** - Content review and approval
+- **User Management** - Account verification and support
+- **Business Intelligence** - Platform analytics and reporting
+- **Content Featuring** - Highlight premium properties
 
 ---
 
-## 🔒 Security
+## 🎨 Design System
 
-* Password hashing with bcrypt
-* JWT token authentication
-* Input validation and sanitization
-* File upload restrictions
-* CORS configuration
+### Visual Identity
+- **Color Palette**: Earth tones emphasizing sustainability
+- **Typography**: Inter font family for optimal readability
+- **Icons**: Consistent iconography system
+
+### User Experience
+- **Responsive Design** - Mobile-first approach
+- **Accessibility** - WCAG 2.1 compliant
+- **Performance** - Optimized loading and interactions
+- **Intuitive Navigation** - User-centered information architecture
 
 ---
 
-## 🚀 Deployment
+## 🔒 Security Implementation
 
-* **Backend Deployment**: Render
-* **Frontend Deployment**: Netlify
+### Authentication & Authorization
+- **JWT Tokens** - Stateless authentication
+- **Password Hashing** - bcrypt with salt rounds
+- **Role-Based Access** - Granular permission system
+- **Session Management** - Secure token storage
+
+### Data Protection
+- **Input Validation** - Comprehensive request sanitization
+- **CORS Configuration** - Controlled cross-origin requests
+- **File Upload Security** - Type and size restrictions
+- **API Rate Limiting** - Abuse prevention mechanisms
+
+---
+
+## 🚀 Deployment & DevOps
+
+### Production Environment
+- **Frontend**: Netlify (Static hosting)
+- **Backend**: Render (Node.js hosting)
+- **Database**: MongoDB Atlas (Cloud database)
+- **Media Storage**: Cloudinary (CDN & optimization)
+
+### Environment Configuration
+```env
+# Backend (.env)
+NODE_ENV=production
+MONGODB_URI=your_atlas_connection_string
+JWT_SECRET=your_secure_secret
+CLOUDINARY_URL=your_cloudinary_credentials
+
+# Frontend (.env.production)
+VITE_API_URL=your_backend_production_url
+```
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+We welcome contributions from the community! Please follow these guidelines:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
+3. **Commit** your changes (`git commit -m 'Add AmazingFeature'`)
+4. **Push** to the branch (`git push origin feature/AmazingFeature`)
+5. **Open** a Pull Request
+
+### Development Standards
+- Follow React best practices
+- Write meaningful commit messages
+- Include tests for new features
+- Update documentation accordingly
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🙏 Acknowledgments
 
-* Sustainable Development Goals (SDGs) inspiration
-* Kenyan housing market research
-* Modern UI design patterns
-* Open source community
+- **Sustainable Development Goals** - Inspiration for our mission
+- **Kenyan Housing Market** - Research and insights
+- **Open Source Community** - Tools and libraries
+- **Modern Design Patterns** - UI/UX best practices
 
 ---
 
-## 📞 Support
+## 📞 Support & Community
 
-For support, email: `support@housy.co.ke` or join our Slack channel.
+- **Email**: support@housy.co.ke
+- **Documentation**: [Project Wiki](https://github.com/iampunit123/housy_project/wiki)
+- **Issue Tracking**: [GitHub Issues](https://github.com/iampunit123/housy_project/issues)
+- **Feature Requests**: [GitHub Discussions](https://github.com/iampunit123/housy_project/discussions)
+
+---
 
 <div align="center">
-Built with ❤️ for a Sustainable Kenya  
 
-🏠 [Live Demo](https://housy-project-ffe752.netlify.app/) | 📚 Documentation | 🐛 Report Bug
+### **Built with ❤️ for a Sustainable Kenya**
+
+[![Live Demo](https://img.shields.io/badge/🏠_Live_Demo-Visit_Site-brightgreen?style=for-the-badge)](https://housy-project-ffe752.netlify.app)
+[![Docs](https://img.shields.io/badge/📚_Documentation-Read_Here-blue?style=for-the-badge)](https://github.com/iampunit123/housy_project/wiki)
+[![Issues](https://img.shields.io/badge/🐛_Report_Bug-Issues-red?style=for-the-badge)](https://github.com/iampunit123/housy_project/issues)
+[![Features](https://img.shields.io/badge/💡_Request_Feature-Discussions-green?style=for-the-badge)](https://github.com/iampunit123/housy_project/discussions)
 
 </div>
 ```
