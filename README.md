@@ -2,14 +2,19 @@
 ```markdown
 # 🏠 Housy - Sustainable Housing Made Easy
 
-![Housy Banner](https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)
+![Housy Banner](https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)
 
 > **Connecting Kenyans with Eco-Friendly Living Spaces**
 
+<div align="center">
+
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://housy-project-ffe752.netlify.app/)
-[![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue)](https://housy-project-ffe752.netlify.app/)
-[![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-green)](https://housy-project-ffe752.netlify.app/)
-[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-orange)](https://housy-project-ffe752.netlify.app/)
+[![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue)](https://github.com/iampunit123/housy_project)
+[![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-green)](https://github.com/iampunit123/housy_project)
+[![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-orange)](https://github.com/iampunit123/housy_project)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](https://github.com/iampunit123/housy_project)
+
+</div>
 
 ---
 
@@ -19,13 +24,15 @@ Housy is a modern property listing platform revolutionizing Kenya's housing mark
 
 ### 🎯 Key Features
 
-- **🏡 Smart Property Discovery** - Advanced search with sustainability filters
-- **🌱 Eco-Rating System** - AI-powered sustainability scoring for properties
-- **📱 Seamless Experience** - Beautiful, responsive design built with modern technologies
-- **🔐 Secure Platform** - JWT authentication & role-based access control
-- **🖼️ Media Management** - Cloudinary integration for high-quality image uploads
-- **👥 Multi-Role Ecosystem** - Tailored experiences for Tenants, Landlords, and Admins
-- **⭐ Community Reviews** - Trust-based rating system for properties and landlords
+| Feature | Description |
+|---------|-------------|
+| 🏡 **Smart Property Discovery** | Advanced search with sustainability filters |
+| 🌱 **Eco-Rating System** | AI-powered sustainability scoring for properties |
+| 📱 **Seamless Experience** | Beautiful, responsive design built with modern technologies |
+| 🔐 **Secure Platform** | JWT authentication & role-based access control |
+| 🖼️ **Media Management** | Cloudinary integration for high-quality image uploads |
+| 👥 **Multi-Role Ecosystem** | Tailored experiences for Tenants, Landlords, and Admins |
+| ⭐ **Community Reviews** | Trust-based rating system for properties and landlords |
 
 ---
 
@@ -74,21 +81,14 @@ npm run dev
 ## 🏗️ Technology Stack
 
 ### Frontend
-- **React 18** - Modern UI library with hooks
-- **Vite** - Lightning-fast build tool
-- **Tailwind CSS** - Utility-first styling
-- **React Router** - Client-side navigation
-- **Axios** - HTTP client for API calls
-- **Lucide React** - Beautiful icon system
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white)
 
 ### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web application framework
-- **MongoDB** - NoSQL database
-- **Mongoose** - MongoDB object modeling
-- **JWT** - Secure authentication
-- **Cloudinary** - Image storage & optimization
-- **bcryptjs** - Password hashing
+![Node.js](https://img.shields.io/badge/Node.js-16+-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-4.x-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-47A248?logo=mongodb&logoColor=white)
 
 ---
 
@@ -147,28 +147,28 @@ housy_project/
 Housy evaluates properties based on comprehensive environmental criteria:
 
 ### Energy Efficiency (25%)
-- Solar panel installations
-- Energy-star rated appliances
-- LED lighting systems
-- Smart home automation
+- ☀️ Solar panel installations
+- ⚡ Energy-star rated appliances
+- 💡 LED lighting systems
+- 🏠 Smart home automation
 
 ### Water Conservation (25%)
-- Rainwater harvesting systems
-- Low-flow fixtures
-- Greywater recycling
-- Drought-resistant landscaping
+- 💧 Rainwater harvesting systems
+- 🚿 Low-flow fixtures
+- 🔄 Greywater recycling
+- 🌿 Drought-resistant landscaping
 
 ### Waste Management (25%)
-- Recycling infrastructure
-- Composting facilities
-- Waste reduction programs
-- Sustainable packaging
+- ♻️ Recycling infrastructure
+- 🍂 Composting facilities
+- 📉 Waste reduction programs
+- 📦 Sustainable packaging
 
 ### Materials & Construction (25%)
-- Eco-friendly building materials
-- Green roofing
-- Sustainable wood sourcing
-- Low-VOC paints
+- 🏗️ Eco-friendly building materials
+- 🌿 Green roofing
+- 🌳 Sustainable wood sourcing
+- 🎨 Low-VOC paints
 
 ---
 
@@ -199,7 +199,6 @@ Housy evaluates properties based on comprehensive environmental criteria:
 ### Visual Identity
 - **Color Palette**: Earth tones emphasizing sustainability
 - **Typography**: Inter font family for optimal readability
-- **Navigation**: Dark theme with contrasting accent colors
 - **Icons**: Consistent iconography system
 
 ### User Experience
@@ -268,7 +267,7 @@ We welcome contributions from the community! Please follow these guidelines:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -294,21 +293,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ### **Built with ❤️ for a Sustainable Kenya**
 
-[🏠 Live Demo](https://housy-project-ffe752.netlify.app) • 
-[📚 Documentation](https://github.com/iampunit123/housy_project/wiki) • 
-[🐛 Report Bug](https://github.com/iampunit123/housy_project/issues) • 
-[💡 Request Feature](https://github.com/iampunit123/housy_project/discussions)
+[![Live Demo](https://img.shields.io/badge/🏠_Live_Demo-Visit_Site-brightgreen?style=for-the-badge)](https://housy-project-ffe752.netlify.app)
+[![Docs](https://img.shields.io/badge/📚_Documentation-Read_Here-blue?style=for-the-badge)](https://github.com/iampunit123/housy_project/wiki)
+[![Issues](https://img.shields.io/badge/🐛_Report_Bug-Issues-red?style=for-the-badge)](https://github.com/iampunit123/housy_project/issues)
+[![Features](https://img.shields.io/badge/💡_Request_Feature-Discussions-green?style=for-the-badge)](https://github.com/iampunit123/housy_project/discussions)
 
 </div>
 ```
 
-## 🎯 **Key Improvements Made:**
-
-1. **Professional Structure** - Better organization with clear sections
-2. **Visual Enhancements** - Added badges, tables, and better formatting
-3. **Technical Details** - More comprehensive tech stack information
-4. **User Roles** - Clearer permission descriptions
-5. **Sustainability Framework** - Detailed scoring system
-6. **Security Section** - Comprehensive security measures
-7. **Deployment Info** - Clear production environment details
-8. **Community Links** - Better support and contribution guidelines
