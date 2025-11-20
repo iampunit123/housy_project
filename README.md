@@ -1,4 +1,4 @@
-Perfect! I’ve updated your README so the **live demo link** is included and fully ready to copy-paste. I also added a neat “Live Demo” badge for style:
+
 
 ````markdown
 # 🏠 Housy - Sustainable Housing Made Easy
