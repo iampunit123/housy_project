@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
 import { Mail, Lock, Home } from 'lucide-react';
+import { authAPI } from '../../api/authAPI'; // adjust path if needed
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,6 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -26,14 +25,18 @@ const LoginPage = () => {
     setLoading(true);
     setError('');
 
-    const result = await login(formData.email, formData.password);
-    
-    if (result.success) {
-      navigate('/');
-    } else {
-      setError(result.message);
+    try {
+      const res = await authAPI.login(formData.email, formData.password);
+
+      // Save token to localStorage
+      localStorage.setItem('housy_token', res.data.token);
+
+      navigate('/'); // Redirect on successful login
+    } catch (err) {
+      // Handle error from backend
+      setError(err.response?.data?.message || 'Login failed. Please try again.');
     }
-    
+
     setLoading(false);
   };
 
