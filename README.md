@@ -8,7 +8,7 @@
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://housy-project-ffe752.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen)](https://housy-project.vercel.app/)
 [![Frontend](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue)](https://github.com/iampunit123/housy_project)
 [![Backend](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-green)](https://github.com/iampunit123/housy_project)
 [![Database](https://img.shields.io/badge/Database-MongoDB%20Atlas-orange)](https://github.com/iampunit123/housy_project)
@@ -74,7 +74,7 @@ npm run dev
 4. **Access Your Application**
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:5000
-- **Live Demo**: [housy-project-ffe752.netlify.app](https://housy-project-ffe752.netlify.app/)
+- **Live Demo**: [https://housy-project.vercel.app/](https://housy-project.vercel.app/)
 
 ---
 
@@ -293,7 +293,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### **Built with ❤️ for a Sustainable Kenya**
 
-[![Live Demo](https://img.shields.io/badge/🏠_Live_Demo-Visit_Site-brightgreen?style=for-the-badge)](https://housy-project-ffe752.netlify.app)
+[![Live Demo](https://img.shields.io/badge/🏠_Live_Demo-Visit_Site-brightgreen?style=for-the-badge)](https://housy-project.vercel.app/)
 [![Docs](https://img.shields.io/badge/📚_Documentation-Read_Here-blue?style=for-the-badge)](https://github.com/iampunit123/housy_project/wiki)
 [![Issues](https://img.shields.io/badge/🐛_Report_Bug-Issues-red?style=for-the-badge)](https://github.com/iampunit123/housy_project/issues)
 [![Features](https://img.shields.io/badge/💡_Request_Feature-Discussions-green?style=for-the-badge)](https://github.com/iampunit123/housy_project/discussions)

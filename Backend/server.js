@@ -19,7 +19,8 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://housy-project-ffe752.netlify.app'
+  'https://housy-project-ffe752.netlify.app',
+  'https://housy-project.vercel.app'
 ];
 
 app.use(cors({
