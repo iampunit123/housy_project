@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Home } from 'lucide-react';
-import { authAPI } from '../../api/authAPI'; // adjust path if needed
+import { authAPI } from '../../services/api/authAPI';
+
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
