@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/database.js';
 import errorHandler from './middleware/errorMiddleware.js';
+import uploadRoutes from './routes/uploadRoutes.js';
 
 // Route imports
 import authRoutes from './routes/authRoutes.js';
@@ -41,6 +42,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/properties', propertyRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/reviews', reviewRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // Basic route
 app.get('/', (req, res) => {

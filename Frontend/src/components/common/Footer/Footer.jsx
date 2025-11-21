@@ -64,7 +64,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-secondary-400" />
-                <span className="text-gray-300">+254 700 000 000</span>
+                <span className="text-gray-300">+254 757 771 836</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-secondary-400" />
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2023 Housy Kenya. All rights reserved. | Sustainable Development Goals Aligned</p>
+          <p>&copy; 2025 Housy Kenya. All rights reserved. | Sustainable Development Goals Aligned</p>
         </div>
       </div>
     </footer>

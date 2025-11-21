@@ -2,6 +2,9 @@ import User from '../models/User.js';
 import generateToken from '../utils/generateToken.js';
 import { validationResult } from 'express-validator';
 
+// @desc    Register a new user
+// @route   POST /api/auth/register
+// @access  Public
 export const registerUser = async (req, res) => {
   try {
     const errors = validationResult(req);
@@ -41,6 +44,9 @@ export const registerUser = async (req, res) => {
   }
 };
 
+// @desc    Auth user & get token
+// @route   POST /api/auth/login
+// @access  Public
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -70,6 +76,9 @@ export const loginUser = async (req, res) => {
   }
 };
 
+// @desc    Get user profile
+// @route   GET /api/auth/profile
+// @access  Private
 export const getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('-password');
@@ -85,6 +94,9 @@ export const getUserProfile = async (req, res) => {
   }
 };
 
+// @desc    Update user profile
+// @route   PUT /api/auth/profile
+// @access  Private
 export const updateUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -116,5 +128,59 @@ export const updateUserProfile = async (req, res) => {
   } catch (error) {
     console.error('Update profile error:', error);
     res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// @desc    Create admin user (Production only)
+// @route   POST /api/auth/create-admin
+// @access  Public (but protected with secret key)
+export const createAdmin = async (req, res) => {
+  try {
+    const { secretKey, name, email, password } = req.body;
+    
+    // Verify admin creation secret
+    if (secretKey !== process.env.ADMIN_CREATION_SECRET) {
+      return res.status(403).json({ 
+        success: false,
+        message: 'Unauthorized: Invalid admin creation secret' 
+      });
+    }
+
+    // Check if user already exists
+    const userExists = await User.findOne({ email });
+    if (userExists) {
+      return res.status(400).json({
+        success: false,
+        message: 'User already exists with this email'
+      });
+    }
+
+    // Create admin user
+    const user = await User.create({
+      name,
+      email,
+      password,
+      userType: 'admin',
+      isVerified: true,
+      isActive: true
+    });
+
+    res.status(201).json({
+      success: true,
+      message: 'Admin user created successfully',
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        userType: user.userType,
+        isVerified: user.isVerified
+      }
+    });
+  } catch (error) {
+    console.error('Create admin error:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Server error during admin creation'
+    });
   }
 };
