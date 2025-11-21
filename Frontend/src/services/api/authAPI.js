@@ -4,7 +4,7 @@ const API_URL = import.meta.env.VITE_API_URL + '/api/auth';
 
 const api = axios.create({
   baseURL: API_URL,
-});
+  });
 
 // Add token to requests
 api.interceptors.request.use(

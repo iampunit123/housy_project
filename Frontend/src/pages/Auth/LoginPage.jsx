@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Home } from 'lucide-react';
-import { authAPI } from "../../services/api/authAPI";
-
-
+import { useAuth } from '../../contexts/AuthContext';
 
 const LoginPage = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-
   const navigate = useNavigate();
+  const { login } = useAuth(); // Use context
 
   const handleChange = (e) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setError(''); // Clear error on input
   };
 
   const handleSubmit = async (e) => {
@@ -28,15 +21,14 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const res = await authAPI.login(formData.email, formData.password);
-
-      // Save token to localStorage
-      localStorage.setItem('housy_token', res.data.token);
-
-      navigate('/'); // Redirect on successful login
+      const res = await login(formData.email, formData.password);
+      if (res.success) {
+        navigate('/'); // Redirect on successful login
+      } else {
+        setError(res.message || 'Login failed. Please try again.');
+      }
     } catch (err) {
-      // Handle error from backend
-      setError(err.response?.data?.message || 'Login failed. Please try again.');
+      setError(err.response?.data?.message || err.message || 'Network error');
     }
 
     setLoading(false);

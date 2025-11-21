@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { authAPI } from '../../services/api/authAPI';
 
-
 const RegisterPage = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
@@ -11,6 +10,7 @@ const RegisterPage = () => {
 
   const handleChange = (e) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setError(''); // Clear error on input
   };
 
   const handleSubmit = async (e) => {
@@ -19,9 +19,18 @@ const RegisterPage = () => {
     setError('');
 
     try {
-      const res = await authAPI.register(formData); // sends POST to backend
+      const res = await authAPI.register({
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        password: formData.password,
+      });
+
       if (res.data.success) {
-        navigate('/login'); // redirect to login page
+        // Optional: store token if backend returns it
+        if (res.data.token) {
+          localStorage.setItem('housy_token', res.data.token);
+        }
+        navigate('/login'); // Redirect after successful registration
       } else {
         setError(res.data.message || 'Registration failed');
       }
