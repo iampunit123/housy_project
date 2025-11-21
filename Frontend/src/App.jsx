@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import Layout from './components/common/Layout/Layout';
 import HomePage from './pages/Home/HomePage';
-import PropertiesPage from './pages/Properties/PropertiesPage';
+import PropertiesPage from './pages/Properties/PropertiesPage.jsx';
 import PropertyDetailPage from './pages/Properties/PropertyDetailPage';
 import LoginPage from './pages/Auth/LoginPage';
 import RegisterPage from './pages/Auth/RegisterPage';
